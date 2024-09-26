@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  width: 100%; /* Full width to maximize container size */
+}
+
+.imageContainer {
+  text-align: center; /* Center the image and title text */
+  margin-bottom: 20px; /* Space between the image and the columns */
+}
+
+.columns {
+  display: flex;
+  justify-content: center; /* Center the columns within the container */
+  width: 40%; /* Full width to align with the parent */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within each column */
+  flex: 1; /* Flex each column equally */
+}

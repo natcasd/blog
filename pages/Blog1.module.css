@@ -1,0 +1,15 @@
+.side {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.back {
+  text-align: center;
+}
+.text {
+  width: 60%;
+  margin: 0 auto;
+}
+.paragraph {
+  text-indent: 40px;
+}
