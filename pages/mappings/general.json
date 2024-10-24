@@ -28,5 +28,10 @@
     "title": "England Blog",
     "href": "blogs/Blog1",
     "date": "November 2023"
+  },
+  {
+    "title": "Reads",
+    "href": "Recent Reads",
+    "date": "na"
   }
 ]

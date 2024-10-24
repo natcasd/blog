@@ -67,12 +67,6 @@ export default function Home() {
             </Section>
           ))}
         </div>
-        {/* Reads Button */}
-        <div className="flex items-center justify-center mt-4">
-          <AwesomeButton type="danger" href="/RecentReads">
-            Reads
-          </AwesomeButton>
-        </div>
       </div>
     </div>
   );
