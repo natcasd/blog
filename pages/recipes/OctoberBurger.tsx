@@ -47,8 +47,8 @@ export default function OctoberBurger() {
           <li>Cook onions in beef fond until somewhat deglazed.</li>
           <li>Add chicken stock.</li>
           <li>
-            Reduce until noticeably thicker, and add Dijon mustard to thicken
-            further.
+            Reduce until noticeably thicker, add Dijon mustard to thicken
+            further, and mount to thicken even further.
           </li>
           <li>Season to taste with salt and pepper.</li>
         </ol>
