@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import grates from "./images/grates.jpg";
-import ramen from "./images/campingramen.jpg";
-import spameggs from "./images/spameggs.jpg";
+import grates from "../images/grates.jpg";
+import ramen from "../images/campingramen.jpg";
+import spameggs from "../images/spameggs.jpg";
 
 export default function Blog5() {
   return (

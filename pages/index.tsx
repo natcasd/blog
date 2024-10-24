@@ -3,11 +3,36 @@ import Image from "next/image";
 import profile from "./images/profile.jpg";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
+import { ReactNode, useState } from "react";
+import Section from "./components/Section";
+
+import { FaChevronRight } from "react-icons/fa";
+import generalData from "./mappings/general.json";
+import mapsData from "./mappings/maps.json";
+import reviewsData from "./mappings/reviews.json";
+import recipesData from "./mappings/recipes.json";
+
+interface Blog {
+  title: string;
+  href: string;
+  date: string;
+}
+interface SectionData {
+  section: string;
+  entries: Blog[];
+}
 
 export default function Home() {
+  const sections: SectionData[] = [
+    { section: "General", entries: generalData },
+    { section: "Reviews", entries: reviewsData },
+    { section: "Recipes", entries: recipesData },
+    { section: "Maps", entries: mapsData },
+  ];
+
   return (
-    <div className="flex flex-col items-center w-full py-8">
-      <h1 className="text-4xl font-bold mb-8">Nathan's Website</h1>
+    <div className="main-container flex flex-col items-center w-full py-8">
+      <h1 className="text-6xl font-bold mb-8 underline">Nate's Blog</h1>
       <div className="mb-8 w-full max-w-xl px-4">
         <Image
           src={profile}
@@ -18,98 +43,36 @@ export default function Home() {
           className="w-full"
         />
       </div>
-      <div className="flex justify-center items-start mb-4 w-full">
-        <div className="flex space-x-12 text-center">
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">Blog Posts</h2>
-            <div className="flex flex-col items-center space-y-0.1">
-              <Link
-                href="/Blog1"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                England Blog
-              </Link>
-              <Link
-                href="/Blog2"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Cost of Eating Out
-              </Link>
-              <Link
-                href="/Blog3"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Eureka!
-              </Link>
-              <Link
-                href="/Blog4"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                A memory from Madrid
-              </Link>
-              <Link
-                href="/Blog5"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Vehicles for Drinking
-              </Link>
-              <Link
-                href="/Blog6"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Camping!
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">Maps</h2>
-            <div className="flex flex-col items-center space-y-0.1">
-              <Link
-                href="/LondonMap"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                London
-              </Link>
-              <Link
-                href="/BarcelonaMap"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Barcelona
-              </Link>
-              <Link
-                href="/ParisMap"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Paris
-              </Link>
-
-              <Link
-                href="/NYCMap"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                NYC
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">Reviews</h2>
-            <div className="flex flex-col items-center space-y-0.1">
-              <Link
-                href="/DaddiesNYC"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                Daddies NYC Review
-              </Link>
-            </div>
-          </div>
+      {/* Container aligned with the image */}
+      <div className="w-full max-w-xl px-4">
+        <div className="flex flex-col items-start mb-4 w-full">
+          {sections.map((sectionData) => (
+            <Section key={sectionData.section} title={sectionData.section}>
+              {sectionData.entries.map((entry) => (
+                <div key={entry.href} className="flex items-center mb-1 w-full">
+                  {/* Dotted line to the left */}
+                  <div className="border-l-2 border-dotted border-gray-400 h-full mr-2"></div>
+                  {/* Entry content */}
+                  <div className="flex justify-between items-center w-full">
+                    <Link
+                      href={entry.href}
+                      className="text-blue-500 underline hover:text-blue-700 text-lg"
+                    >
+                      {entry.title}
+                    </Link>
+                    <div className="text-sm text-gray-500">{entry.date}</div>
+                  </div>
+                </div>
+              ))}
+            </Section>
+          ))}
         </div>
-      </div>
-
-      <div className="flex items-center justify-center mt-4">
-        <h1 className="mr-2 text-xl">-----------------&gt;</h1>
-        <AwesomeButton type="danger" href="/RecentReads">
-          Reads
-        </AwesomeButton>
+        {/* Reads Button */}
+        <div className="flex items-center justify-center mt-4">
+          <AwesomeButton type="danger" href="/RecentReads">
+            Reads
+          </AwesomeButton>
+        </div>
       </div>
     </div>
   );

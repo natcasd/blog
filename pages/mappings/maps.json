@@ -1,0 +1,22 @@
+[
+  {
+    "title": "NYC",
+    "href": "maps/NYCMap",
+    "date": "July 2024"
+  },
+  {
+    "title": "Paris",
+    "href": "maps/ParisMap",
+    "date": "June 2024"
+  },
+  {
+    "title": "Barcelona",
+    "href": "maps/BarcelonaMap",
+    "date": "June 2024"
+  },
+  {
+    "title": "London",
+    "href": "maps/LondonMap",
+    "date": "May 2024"
+  }
+]
