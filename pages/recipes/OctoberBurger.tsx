@@ -19,7 +19,7 @@ export default function OctoberBurger() {
       <div className="max-w-2xl mx-auto bg-white p-6">
         <Image
           src={burger}
-          alt="Hotdog 1"
+          alt="burger"
           width={200}
           height={300}
           className="w-full h-auto"
