@@ -8,41 +8,54 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [maxHeight, setMaxHeight] = useState<string>("0px"); // For expanding height
+  const [maxHeight, setMaxHeight] = useState<string>("0px");
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Handle scroll when the section is open
-    if (isOpen && sectionRef.current) {
-      const rect = sectionRef.current.getBoundingClientRect();
-      const bottom = rect.bottom;
-      const viewportHeight =
-        window.innerHeight || document.documentElement.clientHeight;
-
-      if (bottom > viewportHeight) {
-        const scrollAmount = bottom - viewportHeight + 20; // Adjust padding as needed
-        window.scrollBy({
-          top: scrollAmount,
-          left: 0,
-          behavior: "smooth",
-        });
-      }
+  const handleScroll = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
+  };
 
-    // Adjust maxHeight for smooth slide-down animation
+  const toggleSection = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation(); // Prevent container click from triggering
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
     if (isOpen && contentRef.current) {
       setMaxHeight(`${contentRef.current.scrollHeight}px`);
+
+      // Delay the scroll until after the content has expanded
+      setTimeout(() => {
+        handleScroll();
+      }, 125); // Match the duration of the CSS transition
     } else {
       setMaxHeight("0px");
     }
   }, [isOpen]);
 
+  // Handle clicks inside the section, excluding links
+  const handleSectionClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement;
+    if (target.tagName !== "A" && target.tagName !== "BUTTON" && isOpen) {
+      setIsOpen(false); // Close the section if clicking inside but not on links/buttons
+    }
+  };
+
   return (
-    <div ref={sectionRef} className="w-full mb-1">
-      {/* Button with title and arrow */}
+    <div
+      ref={sectionRef}
+      className="w-full mb-1 cursor-pointer"
+      onClick={handleSectionClick}
+    >
+      {/* Header with title and arrow */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleSection}
         className="w-full flex items-center justify-between text-left focus:outline-none"
         aria-expanded={isOpen}
       >
@@ -61,10 +74,10 @@ const Section: React.FC<SectionProps> = ({ title, children }) => {
         }`}
       ></div>
 
-      {/* Content with fade-in and slide-down animation */}
+      {/* Content wrapper with maxHeight transition */}
       <div
         ref={contentRef}
-        className="transition-all duration-300 ease-in-out overflow-hidden"
+        className="transition-all duration-150 ease-in-out overflow-hidden"
         style={{
           maxHeight: maxHeight,
           opacity: isOpen ? 1 : 0,

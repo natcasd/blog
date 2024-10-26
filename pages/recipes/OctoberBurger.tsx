@@ -24,36 +24,42 @@ export default function OctoberBurger() {
           height={300}
           className="w-full h-auto"
         />
-        <h2 className="text-2xl font-semibold mb-2">Ingredients:</h2>
-        <ul className="list-disc list-inside mb-4">
-          <li>Ground beef (preferably 80/20 but I have 85/15)</li>
-          <li>Smoked gouda</li>
-          <li>Dill</li>
-          <li>Tomato</li>
-          <li>Onion</li>
-          <li>Full fat Greek yogurt (super thick)</li>
-          <li>Kewpie</li>
-          <li>Mustard</li>
-          <li>Vinegar</li>
-          <li>Black pepper</li>
-          <li>Sauce from yesterday</li>
-          <li>Papo seco</li>
-        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          {/* Ingredients Column */}
+          <div>
+            <h2 className="text-3xl font-semibold mb-2">Ingredients:</h2>
+            <ul className="list-disc list-inside mb-4">
+              <li>Ground beef (preferably 80/20 but I have 85/15)</li>
+              <li>Smoked gouda</li>
+              <li>Dill</li>
+              <li>Tomato</li>
+              <li>Onion</li>
+              <li>Full fat Greek yogurt (super thick)</li>
+              <li>Kewpie</li>
+              <li>Mustard</li>
+              <li>Vinegar</li>
+              <li>Black pepper</li>
+              <li>Sauce from yesterday</li>
+              <li>Papo seco</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-4xl font-semibold mb-2">
+              How to Prep Sauce from Yesterday:
+            </h2>
+            <ol className="list-decimal list-inside mb-4 space-y-2">
+              <li>Cook onions in beef fond until somewhat deglazed.</li>
+              <li>Add chicken stock.</li>
+              <li>
+                Reduce until noticeably thicker, add Dijon mustard to thicken
+                further, and mount to thicken even further.
+              </li>
+              <li>Season to taste with salt and pepper.</li>
+            </ol>
+          </div>
+        </div>
 
-        <h2 className="text-2xl font-semibold mb-2">
-          How to Prep Sauce from Yesterday:
-        </h2>
-        <ol className="list-decimal list-inside mb-4 space-y-2">
-          <li>Cook onions in beef fond until somewhat deglazed.</li>
-          <li>Add chicken stock.</li>
-          <li>
-            Reduce until noticeably thicker, add Dijon mustard to thicken
-            further, and mount to thicken even further.
-          </li>
-          <li>Season to taste with salt and pepper.</li>
-        </ol>
-
-        <h2 className="text-2xl font-semibold mb-2">Recipe:</h2>
+        <h2 className="text-4xl font-semibold mb-2">Recipe:</h2>
         <ol className="list-decimal list-inside mb-4 space-y-2">
           <li>
             Prep burger sauce.

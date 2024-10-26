@@ -60,7 +60,7 @@ export default function Home() {
                     >
                       {entry.title}
                     </Link>
-                    <div className="text-sm text-gray-500">{entry.date}</div>
+                    <div className="text-sm text-black">{entry.date}</div>
                   </div>
                 </div>
               ))}

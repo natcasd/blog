@@ -12,7 +12,7 @@ export default function ChickenCurryRecipe() {
       </div>
 
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-center">
           Chicken Curry 🍛
         </h1>
       </div>
@@ -26,24 +26,28 @@ export default function ChickenCurryRecipe() {
           className="w-full h-auto"
         />
 
-        <h2 className="text-2xl font-semibold mb-2">Ingredients:</h2>
-        <ul className="list-disc list-inside mb-4">
-          <li>Onion</li>
-          <li>Garlic</li>
-          <li>Ginger</li>
-          <li>Lemon</li>
-          <li>Fish sauce</li>
-          <li>Curry powder</li>
-          <li>Tomatoes</li>
-          <li>Some sort of pepper</li>
-          <li>Chicken thighs with skin (if bone-in, debone)</li>
-          <li>Sweet potatoes</li>
-          <li>Half and half</li>
-          <li>Chicken stock</li>
-          <li>Yogurt (optional)</li>
-        </ul>
+        <h2 className="text-3xl font-semibold mb-4">Ingredients:</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+          <ul className="list-disc list-inside space-y-1">
+            <li>Onion</li>
+            <li>Garlic</li>
+            <li>Ginger</li>
+            <li>Lemon</li>
+            <li>Fish sauce</li>
+            <li>Curry powder</li>
+            <li>Tomatoes</li>
+          </ul>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Chicken thighs with skin (if bone-in, debone)</li>
+            <li>Sweet potatoes</li>
+            <li>Half and half</li>
+            <li>Chicken stock</li>
+            <li>Yogurt (optional)</li>
+            <li>Some sort of pepper</li>
+          </ul>
+        </div>
 
-        <h2 className="text-2xl font-semibold mb-2">Recipe:</h2>
+        <h2 className="text-3xl font-semibold mb-4">Recipe:</h2>
         <ol className="list-decimal list-inside mb-4 space-y-2">
           <li>Dice up chicken into chunks.</li>
           <li>Sear in a good amount of oil. Remove.</li>
