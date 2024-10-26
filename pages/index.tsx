@@ -25,8 +25,8 @@ interface SectionData {
 export default function Home() {
   const sections: SectionData[] = [
     { section: "General", entries: generalData },
-    { section: "Reviews", entries: reviewsData },
     { section: "Recipes", entries: recipesData },
+    { section: "Reviews", entries: reviewsData },
     { section: "Maps", entries: mapsData },
   ];
 
