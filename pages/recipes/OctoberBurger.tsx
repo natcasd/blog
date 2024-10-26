@@ -71,9 +71,9 @@ export default function OctoberBurger() {
           </li>
           <li>Slice tomato and onions.</li>
           <li>
-            Let <code>x</code> be the number of patties desired. Portion{" "}
-            <code>x</code> burgers into 1cm thick patties, forming them to be
-            the size of the papo seco when cooked.
+            Say you are serving <code>x</code> people. Portion <code>2x</code>{" "}
+            burgers into 1cm thick patties, forming them to be the size of the
+            papo seco when cooked.
           </li>
           <li>
             Season one side of the patties with salt and pepper, then add to a
