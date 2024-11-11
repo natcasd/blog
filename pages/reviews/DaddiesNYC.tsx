@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../Blog1.module.css";
 import burrata from "../images/burrata.jpg";
 import calamari from "../images/calamari.jpg";
 import eggplant from "../images/eggplant.jpg";
