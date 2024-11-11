@@ -25,9 +25,7 @@ export default function DumplingHouse() {
         </h1>
       </div>
       <div className="px-4 md:px-16 lg:px-12 mx-auto max-w-4xl py-4">
-        <p className="indent-8 mb-4">
-          I had such a wonderful meal this afternoon.
-        </p>
+        <p className="indent-8 mb-4">I had a wonderful meal this afternoon.</p>
         <p className="indent-8 mb-4">
           We were up in Boston celebrating a friend’s birthday. This was the
           next day, and we were all a bit fuzzy as a result of the excesses of
