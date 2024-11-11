@@ -85,7 +85,7 @@ export default function DumplingHouse() {
           We also ordered a hot tea that was a perfect accompaniment to the
           food. It had such nice tea flavor. It is always remarkable to me how
           Chinese teas taste so incredible with nothing added to them, as my
-          friend Zach says “just the leaves”.
+          friend Zach says “just the leaves.”
         </p>
         <p className="indent-8 mb-4">
           Last, but certainly not least, we had the fried rice. This lived up
