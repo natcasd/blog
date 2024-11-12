@@ -69,7 +69,10 @@ export default function DumplingHouse() {
           wanted to get my ass kicked with spice, and I wanted to be punched in
           the face with MSG. We settled on spicy salt and pepper pork, of course
           the fried rice, and at the last second switched from my{" "}
-          <a href="https://www.youtube.com/watch?v=h8EcbCXv6M0">
+          <a
+            className="text-blue-500 underline hover:text-blue-700"
+            href="https://www.youtube.com/watch?v=h8EcbCXv6M0"
+          >
             typical garlic bok choy/spinach
           </a>{" "}
           to sauteed cabbage with chili. The spicy salt and pepper pork was
