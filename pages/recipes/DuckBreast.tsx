@@ -12,7 +12,7 @@ const DuckBreastRecipe = () => {
         </Link>
       </div>
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-center">Duck Breast 🦆</h1>
+        <h1 className="text-7xl font-bold text-center">Duck Breast 🦆</h1>
       </header>
 
       <section className="mb-6">
