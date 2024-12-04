@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import profile from "./images/profile.jpg";
+// import profile2 from "./images/profile2.jpg";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import { ReactNode, useState } from "react";
