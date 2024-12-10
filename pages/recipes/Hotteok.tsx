@@ -182,8 +182,8 @@ export default function HotteokRecipe() {
           <li>Heat up water to around 100F.</li>
           <li>Add sugar and yeast to water. Mix until dissolved. Set aside.</li>
           <li>Sift bread flour, rice flour, and tapioca starch into bowl. Add salt.</li>
-          <li>Add wet mix to dry. Knead (note: a rice paddle or rubber spatula works well, making it not stick to your hands). Add canola oil. Knead some more. You want good gluten developement as it makes it more fun to eat and easier to form.</li>
-          <li>You can rest the dough overnight, and it will develop a yeasty flavor. Some people like this, but I don't and I prefer to make the hotteok immediately.</li>
+          <li>Add wet mix to dry. Knead (note: a rice paddle or rubber spatula works best to prevent it from sticking to your hands). Add canola oil. Knead some more. You want good gluten developement so that it makes it is easier to form and more fun to eat.</li>
+          <li>You can rest the dough overnight, and it will develop a yeasty flavor. Some people like this, but I don't and prefer to make the hotteok immediately.</li>
         </ol>
         <h3 className="text-2xl font-semibold mb-2">Cooking:</h3>
         <p>Videos are worth a million words.</p>
