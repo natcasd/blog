@@ -21,6 +21,7 @@ export default function Blog3() {
             width={400}
             height={300}
             className="w-full h-auto"
+      
           />
           <Image
             src={hotdog2}
