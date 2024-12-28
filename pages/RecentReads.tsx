@@ -13,6 +13,12 @@ export default function RecentReads() {
         <h1 className="text-xl font-bold text-center mb-4">Reads</h1>
         <ul className="list-disc pl-5 space-y-2">
           <li>
+            <strong>The Stranger</strong> <em>Albert Camus</em>
+          </li>
+          <li>
+            <strong>To Have and Have Not</strong> <em>by Ernest Hemingway</em>
+          </li>
+          <li>
             <strong>The Beautiful and Damned</strong>{" "}
             <em>by F. Scott Fitzgerald</em>
           </li>
